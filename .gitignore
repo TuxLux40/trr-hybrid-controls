@@ -22,3 +22,7 @@ Thumbs.db
 # local
 *.log
 .env
+
+# reverse-engineering dumps of the proprietary binaries (never commit)
+/re/out/
+/re/proj/
