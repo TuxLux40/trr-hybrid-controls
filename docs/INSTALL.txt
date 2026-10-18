@@ -1,0 +1,42 @@
+TRR Hybrid Controls
+===================
+
+Tank controls on the d-pad, modern controls on the left stick, both at once,
+for Tomb Raider IV-VI Remastered (Steam). No menu toggle.
+
+INSTALL
+-------
+Windows:              double-click install.bat
+Linux / Steam Deck:   run install.sh (Desktop Mode: right-click > Run in Konsole)
+
+The installer finds the game in your Steam libraries and installs the mod; on
+Linux it also sets up Proton to load it. Then start the game from Steam as
+usual and keep Control Type on "Modern" in the options menu.
+
+Manual install: copy files/xinput1_3.dll into the game folder, next to
+tomb456.exe (Steam > right-click the game > Manage > Browse local files).
+On Linux / Steam Deck also set the launch option:
+    WINEDLLOVERRIDES="xinput1_3=n,b" %command%
+
+CONTROLS
+--------
+Left stick      modern, camera-relative movement
+D-pad           original tank controls (turn, walk, back, jump back)
+Left trigger    while aimed, the game uses the modern scheme, so drawing,
+                aiming and firing behave as in Modern controls
+Everything else the game's own Modern layout
+
+UNINSTALL
+---------
+Windows: install.bat -Uninstall      Linux / Steam Deck: ./install.sh --uninstall
+
+SETTINGS
+--------
+TRRHybridControls.ini (created next to tomb456.exe on first start):
+  Stick=Modern|Tank       movement scheme of the left stick
+  DPad=Modern|Tank        movement scheme of the d-pad
+  AimKeepsStick=1|0       1 = aiming stays Modern (default), 0 = the d-pad keeps Tank while aiming
+Changes apply the next time the game starts.
+
+Project page, updates and bug reports:
+https://github.com/TuxLux40/trr-hybrid-controls
